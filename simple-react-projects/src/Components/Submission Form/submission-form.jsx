@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import "./App.css";
 import { useState } from "react";
+import "./Subform.css"; 
 
-function subForm() {
+export default function SubmissionForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState(""); 
     const [email, setEmail] = useState("");
@@ -156,7 +155,7 @@ function subForm() {
                     />
                     Other
                     <label htmlFor="lang">
-                        Your best Subject
+                        Your best subject
                     </label>
                     <input
                     type="checkbox"
@@ -228,7 +227,7 @@ function subForm() {
                             disabled
                             selected={selectedOption === ""}
                         >
-                            Select your ans
+                            Select your answer
                         </option>
                         <optgroup label="Beginners">
                             <option value="1">HTML</option>
@@ -251,7 +250,7 @@ function subForm() {
                         onChange={(e) =>
                             setAbout(e.target.value)
                         }
-                        placeholder="About your self"
+                        placeholder="About yourself"
                         required
                     ></textarea>
                     <button 
@@ -272,6 +271,4 @@ function subForm() {
             </fieldset>
         </div>
     );
-}
-
-export default subForm;
+};
